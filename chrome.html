@@ -1,42 +1,32 @@
 <div class="imgpic_rightsidebar" >
 	<button onclick="imgpicShowSave()" type="button">Show</button>
 </div>
-<div class="imgpic_chrome_init">
 
-
-<div class="imgpic_container">
-       
-
-	
- <form onsubmit="imgpicChomeLogin(this,event)">  
-   <span class="imgpic-form-field">
-    <label>Username</label><input type="text" value="" id="imgpic_chrome_username" name="imgpic_chorme_username" />
-</span>
-<span class="imgpic-form-field">
-   
-    <label>Password</label><input value="" id="imgpic_chrome_password" type="password" name="imgpic_chrome_password" />
-   </span> 
-<button  type="submit" class="imgpic-btn">Login</button>
-</form>
-
-</div>    
-
-</div>
-
-<div id="escalatel4modal" class="dcsModal dcsModal-sm dcaModalPrimary hide" >
+<div id="imgpicExtSaveModal" class="dcsModal dcsModal-sm dcaModalPrimary hide" >
 		<div class="dcsModalHeader">
-			<span class="heading">Escalate To L4</span>
-			<span class="cancel-btn align-right">x</span>
+			<span class="heading">Save To Board</span>
+			<span class="cancel-btn align-right" onclick="imgpicAddClass('imgpicExtSaveModal','hide')">x</span>
 			<div class="clearfix"></div>
 		</div>
 					
 		<div class="dcsModalBody">
-                
+			<table width="100%" >
+				<tr>
+					<td valign="top">
+						<input type="hidden" id="imgpicExtWebsite" value="" />
+						<img id="imgpicExtModalImage" src="" width="250" height="220" />
+						<br />
+						<br />
+						<textarea cols="30"  id="imgpicExtModalDesc"></textarea>
+					</td>
+					<td valign="top">
+						<h4>Boards</h4>
+						<table width="100%" border="1" cellspacing="0" cellpadding="0" id="imgpicExtBoards">
+						</table>
+					</td>
+				</tr>
+			</table>
 		</div>
-		<div class="dcsModalFooter">
-			<button class="align-right cancel-btn" type="button">Cancel</button>
-			<button class="align-right" type="submit">Save</button> 
-			<div class="clearfix"></div>
-		</div>
+		
 	
 </div>
